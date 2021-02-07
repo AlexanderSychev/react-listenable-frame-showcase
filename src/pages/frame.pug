@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title React Listenable Frame Showcase - Frame ##{frameNumber}
+  body
+    div#root(data-frame-number=frameNumber)
+    include ./externals.pug
+    script(src="/frame.js", defer)
