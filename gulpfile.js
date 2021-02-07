@@ -72,7 +72,7 @@ async function assets() {
   const originScriptPath = path.resolve(
     __dirname,
     path.join(
-      '..',
+      'node_modules',
       'react-listenable-frame',
       'lib',
       'react-listenable-frame.min.js',
@@ -85,16 +85,6 @@ async function assets() {
     fs.copyFile(originScriptPath, targetScriptPath),
     fs.copyFile(originSourceMapPath, targetSourceMapPath),
   ]);
-  // await fs.copyFile(
-  //   path.join(
-  //     __dirname,
-  //     'node_modules',
-  //     'react-listenable-frame',
-  //     'lib',
-  //     'react-listenable-frame.min.js',
-  //   ),
-  //   path.join(DIST_DIR, 'react-listenable-frame.min.js'),
-  // );
 }
 
 exports.assets = assets;

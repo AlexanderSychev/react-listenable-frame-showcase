@@ -2025,8 +2025,10 @@ react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-"react-listenable-frame@file:../react-listenable-frame":
-  version "2.0.0"
+react-listenable-frame@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-listenable-frame/-/react-listenable-frame-1.0.0.tgz#804f70550629b19ad09ad646b80451a9702a9ca4"
+  integrity sha512-FVQ/TD2G0PMrlC3VPGvaMyns+smLWYkuZ8UOW3iaLy0shMHeoVkunywcDYVfvpbbL89vKkUUUCyLPybmYv1CVQ==
   dependencies:
     "@types/react" "^17.0.1"
     "@types/react-dom" "^17.0.0"
