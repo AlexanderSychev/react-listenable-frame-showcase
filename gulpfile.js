@@ -6,6 +6,7 @@ const pluginTypeScript = require('@rollup/plugin-typescript');
 const rimraf = require('rimraf-then');
 const mkdirp = require('mkdirp');
 const pug = require('pug');
+const StaticServer = require('static-server');
 const { rollup } = require('rollup');
 const { terser } = require('rollup-plugin-terser');
 const { parallel, series, watch } = require('gulp');
@@ -172,6 +173,21 @@ function watchPUG() {
 exports.watchPUG = watchPUG;
 
 // -----------------------------------------------------------------------------
+// Statis server task
+// -----------------------------------------------------------------------------
+
+function server() {
+  const server = new StaticServer({
+    rootPath: DIST_DIR,
+    port: 8000,
+    cors: '*',
+  });
+  return new Promise((resolve) => server.start(resolve));
+}
+
+exports.server = server;
+
+// -----------------------------------------------------------------------------
 // Main tasks
 // -----------------------------------------------------------------------------
 
@@ -184,5 +200,5 @@ exports.build = build;
 
 exports.default = series(
   build,
-  parallel(watchTS, watchPUG),
+  parallel(server, watchTS, watchPUG),
 );
